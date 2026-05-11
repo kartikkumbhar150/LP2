@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class ChatBot {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String input;
+
+        System.out.println("===== Customer Support Chatbot =====");
+        System.out.println("Type 'exit' to end the chat");
+
+        while (true) {
+
+            System.out.print("\nYou: ");
+            input = sc.nextLine().toLowerCase();
+
+            if (input.equals("exit")) {
+
+                System.out.println("Bot: Thank you for visiting!");
+                break;
+            }
+
+            else if (input.contains("hello") || input.contains("hi")) {
+
+                System.out.println("Bot: Hello! How can I help you?");
+            }
+
+            else if (input.contains("product")) {
+
+                System.out.println("Bot: We offer laptops, mobiles, headphones, and smart watches.");
+            }
+
+            else if (input.contains("price")) {
+
+                System.out.println("Bot: Product prices start from Rs. 999.");
+            }
+
+            else if (input.contains("delivery")) {
+
+                System.out.println("Bot: Delivery usually takes 3 to 5 business days.");
+            }
+
+            else if (input.contains("payment")) {
+
+                System.out.println("Bot: We support UPI, Credit Card, Debit Card, and Cash on Delivery.");
+            }
+
+            else if (input.contains("return")) {
+
+                System.out.println("Bot: Products can be returned within 7 days.");
+            }
+
+            else if (input.contains("contact")) {
+
+                System.out.println("Bot: You can contact us at support@shop.com");
+            }
+
+            else {
+
+                System.out.println("Bot: Sorry, I could not understand your query.");
+            }
+        }
+
+        sc.close();
+    }
+}
